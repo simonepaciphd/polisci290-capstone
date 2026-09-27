@@ -87,9 +87,9 @@ Each graded part of the project has a rubric below. Each criterion is scored on 
 
 *Syllabus: focus on the weekly milestone or one aspect of the project; discuss one analytical or empirical choice and elicit feedback. 5–10 minutes with Q&A.*
 
-Progress reports are graded both on completion (giving each of your two reports) and on the criteria below.
+Progress reports are graded on **completion**: give both of your reports. The table below isn't scored. It describes what a strong report looks like, so use it to prepare.
 
-| Criterion | Strong (2) | Developing (1) | Weak (0) |
+| Criterion | Strong | Developing | Weak |
 |---|---|---|---|
 | **The choice** | One real analytical or empirical choice, clearly stated, with options | A choice, but vague or already made | A status update, no choice |
 | **Eliciting feedback** | Asks a clear question; engages with the answers | Some engagement | No engagement with the class |

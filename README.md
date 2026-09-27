@@ -6,7 +6,7 @@ It walks you through the capstone week by week: one workflow per milestone, from
 
 ## Start here
 
-- **Read it as a web page:** download [`polisci290-capstone-guide.html`](polisci290-capstone-guide.html) and open it in your browser.
+- **Read it as a web page:** <https://simonepaciphd.github.io/polisci290-capstone/>. Your checklist ticks are saved in your own browser.
 - **Read it as Markdown:** start with [`polisci290-00-project-overview.md`](polisci290-00-project-overview.md), then [`polisci290-README.md`](polisci290-README.md).
 - **Hand it to your AI tool:** download [`polisci290-capstone-package.zip`](polisci290-capstone-package.zip), or attach the workflow file for the week you're working on.
 
@@ -18,7 +18,9 @@ It walks you through the capstone week by week: one workflow per milestone, from
 | `polisci290-README.md` | How to use the guide, and how to use it with an AI tool |
 | `workflows/` | Twelve workflows: the nine weekly milestones, progress reports, final presentation, final paper |
 | `docs/` | Capstone formats, rubrics, AI use and disclosure |
-| `polisci290-capstone-guide.html` | The whole guide as one page |
+| `index.html`, `polisci290-capstone-guide.html` | The whole guide as one page (the same file; `index.html` serves the website) |
 | `polisci290-capstone-package.zip` | The Markdown files in one download |
 
 The syllabus and Canvas are authoritative. If anything here conflicts with them, they win.
+
+Released under the [MIT License](LICENSE).
