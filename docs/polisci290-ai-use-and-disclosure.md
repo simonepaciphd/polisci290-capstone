@@ -82,6 +82,10 @@ Verification: [e.g., all 7 sources checked on Google Scholar; code output checke
 **Example entry:**
 "Stress-testing my thesis: the AI suggested that local media closures might matter through party recruitment rather than voter information. I kept my mechanism, but added the recruitment pathway as a rival explanation in section 3."
 
+## When an AI tool can edit files or run code
+
+Use the optional [guide to working with an AI agent](polisci290-agentic-ai.md) and its [replication starter](../replication-starter/). Agree on one small task, keep the work visible, and record your own research decisions. The agent must pause before making a choice that affects your evidence or argument. You should be able to explain the source → steps → result chain and check important results yourself. These practices support the course rules above; they do not add a graded requirement.
+
 ## Access
 
 You have access to frontier AI models through Stanford, and to the Stanford AI Playground. If cost or access is ever a barrier for a particular task, contact the instructor.

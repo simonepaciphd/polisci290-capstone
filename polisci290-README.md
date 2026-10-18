@@ -4,7 +4,8 @@ This folder has everything you need to plan and write your capstone project:
 
 - **one overview** of what the project is and how it is graded;
 - **twelve short workflows**: one for each weekly milestone, one for the progress reports, one for the final presentation, and one for the final paper;
-- **three supporting docs**: capstone formats, rubrics, and AI use and disclosure.
+- **four supporting docs**: capstone formats, rubrics, AI use and disclosure, and working with an AI agent;
+- **an optional replication starter**: one folder for your inputs, outputs, scripts, writing, and visible AI work.
 
 Start with `polisci290-00-project-overview.md`.
 
@@ -28,6 +29,8 @@ Start with `polisci290-00-project-overview.md`.
 | `docs/polisci290-capstone-formats.md` | Week 1–2, and again at the rough draft | Every milestone from the rough draft on |
 | `docs/polisci290-rubrics.md` | Before each graded component | All graded components |
 | `docs/polisci290-ai-use-and-disclosure.md` | Every submission | AI-use note |
+| `docs/polisci290-agentic-ai.md` | Before giving an AI tool access to project files | Student-led tasks, visible tracking, repeatable results |
+| `replication-starter/` | When setting up your project folder | Inputs, outputs, scripts, docs, and agent workspace |
 
 ## How each workflow is built
 
@@ -55,5 +58,9 @@ These files are written so you can **hand them to an AI model** (whichever front
 5. Keep a copy of the chat. You'll need it for your AI-use note.
 
 **What the AI does in these prompts.** It questions you, suggests options for you to choose from, gives you feedback, and can help with working material such as code and data cleaning. **The text you submit is yours.** In this course, all assignments must be written in your own words: submitting AI-written text as your own violates the Stanford Honor Code. See `docs/polisci290-ai-use-and-disclosure.md` for the exact rules.
+
+## If your AI tool can work with files
+
+Start with the [guide to working with an AI agent](docs/polisci290-agentic-ai.md). It includes a small folder setup, a copyable first-task prompt, a status page and work log, and a decision record that you own. The [replication starter](replication-starter/) is included in the package; on the website you can also [download it separately](replication-starter.zip). No coding or Git knowledge is needed to set up the folder. Using an agent is optional.
 
 
