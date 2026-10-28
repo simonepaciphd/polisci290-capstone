@@ -87,10 +87,15 @@ def main():
                for p in (ROOT / "replication-starter").rglob("*") if p.is_file()}
     starter_zip = archive(starter)
     (ROOT / "replication-starter.zip").write_bytes(starter_zip)
+    planning = {p.relative_to(ROOT).as_posix(): p.read_bytes()
+                for p in (ROOT / "research-planning").rglob("*") if p.is_file()}
+    planning_zip = archive(planning)
+    (ROOT / "research-planning.zip").write_bytes(planning_zip)
     files = {f"final-project/{path}": (ROOT / path).read_bytes()
              for path in PAGE_PATHS.values()}
     files.update({f"final-project/{name}": data for name, data in starter.items()})
     files["final-project/replication-starter.zip"] = starter_zip
+    files["final-project/research-planning.zip"] = planning_zip
     package = archive(files)
     (ROOT / "polisci290-capstone-package.zip").write_bytes(package)
 

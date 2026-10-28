@@ -115,3 +115,12 @@ Before a milestone, update the project `README.md` so another person can:
 For a manual evidence table, document the document list, search terms, inclusion and coding rules, and source page references instead. A restricted source may require access instructions rather than a shared copy; do not claim that someone without that access can fully reproduce it.
 
 Write your milestone in your own words and use the work log to prepare your [AI-use note](polisci290-ai-use-and-disclosure.md#ai-use-note-template-suggested-format). The folder and logs support your explanation; they do not replace your judgment or your responsibility for the work.
+
+## Going further: plan your project with an agent
+
+Once your folder is set up, you can also use an agent to plan the whole project before you start the analysis.
+
+- **Read the approach.** The [Research Guide (PDF)](../research-guide/Agentic_Research_Workflow_Research_Guide.pdf) explains it in three moves: decide what the finished project must contain, list what you already have, then plan small tasks that each come with a check.
+- **Give your agent the steps.** The research-planning skill turns that approach into steps your agent follows. Download [`research-planning.zip`](../research-planning.zip) and unzip it into your capstone folder, next to `AGENTS.md`. It comes from a larger public system, [ai-os-public](https://github.com/simonepaciphd/ai-os-public), if you are curious.
+- **Start with one prompt.** Paste this into your tool: `Read AGENTS.md, then read research-planning/SKILL.md and follow it to help me plan my capstone. Start with stage 1.`
+- **Keep the choices yours.** You make every research choice and write every word you submit. The course AI-use rules still apply. This step is optional.
