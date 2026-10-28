@@ -1,0 +1,162 @@
+/* Print stylesheet for guide.html — reproduces the layout of the ReportLab v1 PDF.
+   Units are pt so values map 1:1 onto PDF coordinates (US Letter = 612 x 792 pt).
+   Vertical margins were derived from the original baselines; the decimals
+   compensate for CSS half-leading with FreeSans metrics (ascent .9 / descent .3). */
+
+/* FreeSans (GNU FreeFont 20120503, GPLv3 + font exception; see fonts/COPYING
+   and fonts/README). The full font files are shipped in fonts/ and always used
+   (no local() lookup), so the build does not depend on installed fonts. */
+@font-face {
+  font-family: "Guide Sans";
+  src: url("fonts/FreeSans.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Guide Sans";
+  src: url("fonts/FreeSansBold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+:root {
+  --navy:   #19324b;   /* title, part and section headings */
+  --teal:   #216b72;   /* step headings, flow-box and table-header rules */
+  --muted:  #526070;   /* subtitle, footer */
+  --tint:   #eaf3f3;   /* callout and table-header fill */
+  --tint-rule: #bdd6d7;/* callout border */
+  --row-rule:  #d5dee2;/* table row separators */
+  --foot-rule: #d8e0e6;/* footer rule */
+  --sans: "Guide Sans", "Liberation Sans", Helvetica, Arial, sans-serif;
+}
+
+/* ---------- page box ---------- */
+@page {
+  size: letter;                      /* 612 x 792 pt */
+  margin: 58pt 55pt 47pt 55pt;       /* frame 55..557 x 58..745; footer rule at y=745 */
+
+  @bottom-left {
+    content: "Agentic Research Workflow  |  Research project guide";
+    white-space: pre;
+    font: 8pt/9.6pt var(--sans);
+    color: var(--muted);
+    vertical-align: top;
+    text-align: left;
+    border-top: 1pt solid var(--foot-rule);
+    padding-top: 5.8pt;
+  }
+  @bottom-right {
+    content: counter(page);
+    font: 8pt/9.6pt var(--sans);
+    color: var(--muted);
+    vertical-align: top;
+    text-align: right;
+    border-top: 1pt solid var(--foot-rule);
+    padding-top: 5.8pt;
+  }
+}
+
+html, body { margin: 0; padding: 0; background: #fff; }
+body {
+  padding: 0 4.4pt 0 6pt;            /* text starts at x=61; 491.6 pt column reproduces v1 line breaks in Chrome */
+  font-family: var(--sans);
+  font-size: 9.4pt;
+  line-height: 15pt;
+  color: #000;
+  font-kerning: none;                /* ReportLab does not kern */
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---------- headings ---------- */
+h1 {
+  margin: 1.6pt 0 0;
+  font-size: 23pt; line-height: 29pt; font-weight: bold;
+  color: var(--navy);
+}
+.subtitle {
+  margin: 13.8pt 0 0;
+  font-size: 12pt; line-height: 18pt;
+  color: var(--muted);
+}
+h2 {
+  margin: 21.8pt 0 0;
+  font-size: 15pt; line-height: 18pt; font-weight: bold;
+  color: var(--navy);
+  break-after: avoid;
+}
+h2 + h2         { margin-top: 22pt; }
+.subtitle + h2  { margin-top: 24.1pt; }
+.callout + h2,
+table + h2      { margin-top: 33.5pt; }
+
+h3 {
+  margin: 14.4pt 0 0;
+  font-size: 11pt; line-height: 13.2pt; font-weight: bold;
+  color: var(--teal);
+  break-after: avoid;
+}
+
+/* ---------- body text ---------- */
+p { margin: 9pt 0 0; }
+h2 + p       { margin-top: 10.2pt; }
+h3 + p       { margin-top: 7.4pt; }
+.callout + p { margin-top: 11.7pt; }
+.flow + p    { margin-top: 10.2pt; }
+
+/* ---------- callout boxes ---------- */
+.callout {
+  box-sizing: border-box;
+  width: 485pt;                      /* box spans x 63.5..548.5 */
+  margin: 9.3pt 0 0 2.5pt;
+  padding: 9.7pt 10.4pt 11.1pt 12.4pt; /* text x=76.5, wrap width 461 pt */
+  background: var(--tint);
+  border: 0.6pt solid var(--tint-rule);
+  font-size: 9pt; line-height: 14pt;
+  break-inside: avoid;
+}
+h3 + .callout { margin-top: 7.7pt; }
+
+/* ---------- process flow (page 2) ---------- */
+.flow {
+  width: 420pt;                      /* x 96..516 */
+  margin: 10.5pt 0 0 35pt;
+  font-size: 9pt;
+}
+.flow .step {
+  box-sizing: border-box;
+  height: 28pt;
+  padding: 7.1pt 13.3pt 0;
+  line-height: 11pt;
+  border: 0.7pt solid transparent;
+}
+.flow .step.boxed { border-color: var(--teal); }  /* only first and last step are framed in v1 */
+.flow .arrow {
+  box-sizing: border-box;
+  height: 31pt;
+  padding-top: 9.8pt;
+  font-size: 14pt; line-height: 14pt;
+  text-align: center;
+}
+
+/* ---------- tables ---------- */
+table {
+  width: 485pt;
+  margin: 9.3pt 0 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 8.4pt; line-height: 13pt;
+  break-inside: avoid;
+}
+th, td {
+  padding: 7.4pt 9pt 7.9pt 9pt;
+  text-align: left;
+  vertical-align: top;
+  font-weight: normal;
+}
+thead th { background: var(--tint); border-bottom: 0.7pt solid var(--teal); }
+tbody td { border-bottom: 0.3pt solid var(--row-rule); }
+
+/* ---------- forced page breaks (mirror the v1 PDF; keep last so they win) ---------- */
+body .pb          { break-before: page; }
+body h2.pb        { margin-top: 1.5pt; }
+body h3.pb        { margin-top: 1.1pt; }
+body .callout.pb  { margin-top: 0; }

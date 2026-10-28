@@ -41,6 +41,16 @@ If you already started planning in an earlier session, use the same prompt. The 
 - **Tools that cannot read files:** paste `SKILL.md` and the file for your current stage (in `research-planning/stages/`), plus your current planning files. Save the agent's drafts into `docs/planning/` yourself.
 - **Reviews:** at two points the agent will ask you to open a fresh chat for an independent review. Do it; a reviewer who did not write the draft catches more.
 
+## See your plan as a page
+
+Once you have a plan, the agent can turn your planning files into one page you open in a browser: the tasks in their groups, what each one checks, and the deliverables they lead to. Ask for it, or run this from your project folder:
+
+```text
+python research-planning/viewer/plan_viewer.py docs/planning
+```
+
+It writes `docs/planning/Plan-Visual.html` and needs only Python. It never changes your planning files. Build it again after any change. Details are in `research-planning/viewer/README.md`.
+
 ## How long it takes
 
 Expect a few sessions, not one sitting. Stage 1 (deciding what the project must contain) usually takes the longest, because it is where you make your own choices.

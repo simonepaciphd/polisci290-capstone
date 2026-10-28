@@ -72,6 +72,8 @@ Show the student `SPEC.md`, `RESOURCES.md` and `PLAN.md` together, with a short 
 - the points where the student must decide during the work;
 - the first group of tasks to do.
 
+Optional: build the plan page with `python research-planning/viewer/plan_viewer.py docs/planning` and give the student the link to `docs/planning/Plan-Visual.html`. Fix any `ERROR` it reports only if the fix is mechanical; anything that needs a choice goes to the student. Tell the student about each `WARN`. Build the page again after the lock and after every approved change.
+
 Ask for an explicit "LOCK". Anything less is not a lock. On "LOCK", mark all three files `LOCKED` with the date. If the student uses Git, commit the three files together. Add a log entry in `agent-workspace/log.md` and update `agent-workspace/status.md`.
 
 From now on, any change to the spec goes through `research-planning/stages/5-changes-and-final-check.md`.

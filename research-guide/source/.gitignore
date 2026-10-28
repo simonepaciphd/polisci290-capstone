@@ -1,0 +1,3 @@
+# Build output and the throwaway headless-Chrome profile created by build.py
+out/
+.chrome-profile-*/
